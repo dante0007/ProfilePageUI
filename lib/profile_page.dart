@@ -91,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: buildIconText(
-                      iconSize: 50,
+                      iconSize: 40,
                       OnTap: () {},
                       imageUrl: 'assets/setting.png',
                       label: 'SETTINGS'),
@@ -101,7 +101,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   left: 50,
                   right: 50,
                   child: buildIconText(
-                      iconSize: 80,
+                      iconSize: 70,
                       OnTap: () {},
                       imageUrl: 'assets/mcam.png',
                       label: 'ADD MEDIA'),
@@ -109,7 +109,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: buildIconText(
-                      iconSize: 50,
+                      iconSize: 40,
                       OnTap: () {},
                       imageUrl: 'assets/pencil.png',
                       label: 'EDIT INFO'),
@@ -153,13 +153,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 textColor: Colors.white,
                 color: Colors.black,
                 elevation: 5.0,
-                height: 55.0,
+                height: 45.0,
                 minWidth: MediaQuery.of(context).size.width / 1.6,
                 onPressed: () {},
                 child: const Text(
                   'MY HIM',
                   style: TextStyle(
-                    fontSize: 22.0,
+                    fontSize: 18.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -181,10 +181,7 @@ class _ProfilePageState extends State<ProfilePage> {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(onPressed: OnTap!(), icon: Image.asset(imageUrl!)),
-        const SizedBox(
-          width: 5.0,
-        ),
+        IconButton(onPressed: OnTap!(), icon: Image.asset(imageUrl!,height: 20,width: 20,)),
         Text(
           label!,
           style: const TextStyle(
@@ -216,8 +213,7 @@ class _ProfilePageState extends State<ProfilePage> {
   buildIconButton({Function? onTap, String? imageUrl}) {
     return IconButton(
       onPressed: onTap!(),
-      icon: Image.asset(imageUrl!),
-      iconSize: 5,
+      icon: Image.asset(imageUrl!,height: 21,width: 21,),
     );
   }
 }
